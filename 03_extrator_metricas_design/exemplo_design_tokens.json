@@ -1,0 +1,27 @@
+{
+  "arquivo_referencia": "peca_a_baixa_densidade.png",
+  "dimensoes_originais": {
+    "largura": 1081,
+    "altura": 1351
+  },
+  "formato_detectado": "Feed Vertical 4:5 (1080x1350)",
+  "safe_zone_instagram_feed_px": {
+    "largura": 1080,
+    "altura": 1080,
+    "offset_topo_px": 135
+  },
+  "paleta_hex": {
+    "fundo_canvas": "#F8F9F4",
+    "acento_principal": "#D4D2CB",
+    "texto_dominante": "#21302F",
+    "todas_cores_extraidas": [
+      "#F8F9F4",
+      "#D4D2CB",
+      "#9EA096",
+      "#7D8E8A",
+      "#5B655C",
+      "#21302F"
+    ]
+  },
+  "css_variables_snippet": ":root {\n  --canvas-bg: #F8F9F4;\n  --brand-accent: #D4D2CB;\n  --text-main: #21302F;\n}"
+}

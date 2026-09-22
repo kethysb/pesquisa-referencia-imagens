@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Template 01 • Editorial Suíço</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas-bg: #F8F7F4;
+      --text-main: #102030;
+      --brand-accent: #B86538;
+      --card-bg: rgba(255, 255, 255, 0.85);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: var(--canvas-bg);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 80px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .tag {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--brand-accent);
+    }
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: 64px;
+      line-height: 1.1;
+      font-weight: 700;
+      margin-top: 30px;
+      max-width: 900px;
+    }
+    .grid-photos {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 30px;
+      margin: 40px 0;
+      flex-grow: 1;
+    }
+    .photo-col-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .photo-box {
+      background: #DDD;
+      border-radius: 8px;
+      overflow: hidden;
+      flex: 1;
+    }
+    .photo-box img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .quote-card {
+      background: var(--card-bg);
+      border-left: 4px solid var(--brand-accent);
+      padding: 24px;
+      border-radius: 4px;
+    }
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      padding-top: 24px;
+      font-size: 14px;
+      color: #666;
+    }
+    .firm-name {
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <span class="tag">Direito Trabalhista & Bancário</span>
+      <h1 class="headline">Trabalhou sem carteira assinada?</h1>
+    </div>
+  </div>
+
+  <div class="grid-photos">
+    <div class="photo-col-left">
+      <div class="quote-card">
+        <p class="quote-text">"O que caracteriza o vínculo é a rotina: horário, subordinação e pagamento. O papel só registra o que já existia."</p>
+      </div>
+      <div class="photo-box">
+        <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop&q=80" alt="Contrato">
+      </div>
+    </div>
+    <div class="photo-box">
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80" alt="Advogada">
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="firm-name">VÉRTICE ADVOCACIA • OAB/SP</span>
+    <span>Atendimento Especializado WhatsApp →</span>
+  </div>
+</body>
+</html>

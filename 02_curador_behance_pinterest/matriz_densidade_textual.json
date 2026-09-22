@@ -1,0 +1,29 @@
+{
+  "principio_fundamental": "Paridade de Densidade Textual: O layout de código e o prompt devem possuir a mesma quantidade de blocos que a referência visual.",
+  "formatos_catalogados": {
+    "tipo_01_baixa_densidade": {
+      "nome": "Capa / Gancho Minimalista de Choque",
+      "densidade_palavras": "3 a 8 palavras no H1 + 1 linha de apoio",
+      "elementos_visuais": ["Corte diagonal ou janela ampla", "Fotografia dominante (70% do canvas)", "Respiro generoso (espaço negativo)", "Assinatura discreta"],
+      "casos_de_uso": ["Post de topo de funil", "Capa de carrossel", "Frase de impacto / provocação"]
+    },
+    "tipo_02_dossie_notarial": {
+      "nome": "Dossiê Contratual com Foto Macro",
+      "densidade_palavras": "1 manchete média + 1 card flutuante com 2 a 3 pontos",
+      "elementos_visuais": ["Foto macro em close de documento/contrato sendo assinado", "Card flutuante off-white retangular", "Carimbo de auditoria pericial"],
+      "casos_de_uso": ["Direito Bancário / Dívidas PJ", "Contratos Empresariais", "Due Diligence"]
+    },
+    "tipo_03_alta_densidade_modular": {
+      "nome": "Grid Suíço Modular de Caixas Simétricas",
+      "densidade_palavras": "H1 institucional + 4 a 6 cartões analíticos com números e ícones",
+      "elementos_visuais": ["Grade simétrica de 4 ou 6 caixas", "Ícones monocromáticos de linha", "Numeração 01, 02, 03...", "Base com arquitetura clássica ou foto huddle"],
+      "casos_de_uso": ["Holding Familiar (4 Pilares)", "Checklists de Direitos", "Áreas de Atuação"]
+    },
+    "tipo_04_split_screen_comparativo": {
+      "nome": "Tabela Comparativa Split Screen (50/50)",
+      "densidade_palavras": "Duas colunas de 4 tópicos cada (Antes vs Depois / Errado vs Certo)",
+      "elementos_visuais": ["Lado esquerdo em tom de alerta (escuro/carmim)", "Lado direito em tom de proteção (marfim/verde sálvia)", "Ícones de ✕ vs ✓", "Divisor central vertical"],
+      "casos_de_uso": ["O Banco vs A Defesa", "Inventário vs Holding", "CLT vs Pejotização"]
+    }
+  }
+}

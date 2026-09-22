@@ -1,0 +1,33 @@
+{
+  "versao": "2.0",
+  "descricao": "Dicionário de buscas com alta intenção comercial e dor para SEMrush e Meta Ads Library",
+  "filtros_obrigatorios_meta_ads": {
+    "media_type": "image_and_meme",
+    "sort_mode": "total_impressions",
+    "country": "BR",
+    "active_status": "active"
+  },
+  "nichos": {
+    "advocacia_juridico": [
+      { "subnicho": "Trabalhista Bancário", "termo": "advogado trabalhista bancario", "cpc_medio": "R$ 18,50", "dor": "7ª e 8ª horas extras e falso cargo de confiança" },
+      { "subnicho": "Trabalhista PJ", "termo": "advogado trabalhista PJ sem carteira", "cpc_medio": "R$ 15,20", "dor": "Pejotização fraudulenta e falta de registro" },
+      { "subnicho": "Holding Familiar", "termo": "holding familiar evitar inventario", "cpc_medio": "R$ 22,00", "dor": "Custas de ITCMD e brigas de herdeiros" },
+      { "subnicho": "Defesa Bancária PJ", "termo": "advogado divida banco empresa bloqueio", "cpc_medio": "R$ 19,80", "dor": "Penhora de faturamento e SISBAJUD" },
+      { "subnicho": "Imobiliário Leilões", "termo": "suspensao de leilao de imovel", "cpc_medio": "R$ 24,50", "dor": "Perda do imóvel e dívidas ocultas" },
+      { "subnicho": "Direito à Saúde", "termo": "advogado plano de saude liminar", "cpc_medio": "R$ 28,00", "dor": "Negativa de cirurgias robóticas e medicamentos de alto custo" }
+    ],
+    "saude_estetica": [
+      { "subnicho": "Cirurgia Plástica", "termo": "cirurgia plastica lipo lad valor", "cpc_medio": "R$ 12,50", "dor": "Insegurança corporal e medo de recuperação lenta" },
+      { "subnicho": "Implante Dentário", "termo": "implante dentario carga imediata", "cpc_medio": "R$ 14,80", "dor": "Vergonha de sorrir e mastigação comprometida" },
+      { "subnicho": "Dermatologia & Botox", "termo": "tratamento melasma botox", "cpc_medio": "R$ 9,30", "dor": "Manchas na pele e envelhecimento precoce" }
+    ],
+    "financas_pme": [
+      { "subnicho": "Recuperação Tributária", "termo": "recuperacao de creditos tributarios simples", "cpc_medio": "R$ 17,20", "dor": "Bitributação e pagamento a maior de impostos" },
+      { "subnicho": "BPO Financeiro", "termo": "terceirizacao financeira bpo empresas", "cpc_medio": "R$ 11,40", "dor": "Desorganização de fluxo de caixa e inadimplência" }
+    ],
+    "imobiliario": [
+      { "subnicho": "Distrato de Imóvel", "termo": "distrato imobiliario devolucao parcelas", "cpc_medio": "R$ 21,50", "dor": "Atraso na entrega da obra e retenção indevida da construtora" },
+      { "subnicho": "Usucapião em Cartório", "termo": "usucapiao extrajudicial cartorio", "cpc_medio": "R$ 16,70", "dor": "Imóvel sem escritura e medo de perda de posse" }
+    ]
+  }
+}

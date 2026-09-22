@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Template 04 • Tabela Comparativa Split Screen (50/50)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: #080C12;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+    .col-left {
+      flex: 1;
+      background: #0D131C;
+      padding: 70px 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 2px solid rgba(255, 255, 255, 0.08);
+      color: #FFF;
+    }
+    .col-right {
+      flex: 1;
+      background: #F7F6F2;
+      padding: 70px 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #101824;
+    }
+    .tag-danger {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #F87171;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .tag-success {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #059669;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .col-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 30px;
+    }
+    .items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+    .item-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .icon-box {
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 16px; flex-shrink: 0;
+    }
+    .col-left .icon-box {
+      background: rgba(239, 68, 68, 0.2);
+      color: #EF4444;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+    .col-right .icon-box {
+      background: rgba(16, 185, 129, 0.2);
+      color: #10B981;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+    .item-text h4 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+    .item-text p { font-size: 13px; line-height: 1.5; color: #94A3B8; }
+    .col-right .item-text p { color: #475569; }
+    .col-footer {
+      border-top: 1px solid rgba(0,0,0,0.1);
+      padding-top: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .col-left .col-footer { border-color: rgba(255,255,255,0.1); color: #94A3B8; }
+  </style>
+</head>
+<body>
+  <div class="col-left">
+    <div>
+      <span class="tag-danger">✕ SEM DEFESA</span>
+      <h2 class="col-title">A Proposta do Banco</h2>
+    </div>
+    <div class="items-list">
+      <div class="item-row">
+        <div class="icon-box">✕</div>
+        <div class="item-text">
+          <h4>Juros Sobre Juros</h4>
+          <p>Anatocismo ilegal que dobra o saldo devedor real.</p>
+        </div>
+      </div>
+      <div class="item-row">
+        <div class="icon-box">✕</div>
+        <div class="item-text">
+          <h4>Alienação de Máquinas</h4>
+          <p>Exigência de garantias reais que travam a produção.</p>
+        </div>
+      </div>
+      <div class="item-row">
+        <div class="icon-box">✕</div>
+        <div class="item-text">
+          <h4>Risco de SISBAJUD</h4>
+          <p>Ameaça constante de bloqueio judicial das contas.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-footer">Cobranças agressivas diárias</div>
+  </div>
+
+  <div class="col-right">
+    <div>
+      <span class="tag-success">✓ DEFESA ESTRATÉGICA</span>
+      <h2 class="col-title">A Decisão Judicial</h2>
+    </div>
+    <div class="items-list">
+      <div class="item-row">
+        <div class="icon-box">✓</div>
+        <div class="item-text">
+          <h4>Auditoria Contábil</h4>
+          <p>Perícia técnica de cada contrato assinado com o banco.</p>
+        </div>
+      </div>
+      <div class="item-row">
+        <div class="icon-box">✓</div>
+        <div class="item-text">
+          <h4>Liminar de Proteção</h4>
+          <p>Ordem judicial travando penhoras e bloqueios de contas.</p>
+        </div>
+      </div>
+      <div class="item-row">
+        <div class="icon-box">✓</div>
+        <div class="item-text">
+          <h4>Redução de até 70%</h4>
+          <p>Expurgo de taxas ilegais e recalculo do valor real.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-footer">Castro & Andrade • Advocacia Empresarial</div>
+  </div>
+</body>
+</html>

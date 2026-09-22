@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJETO DE PESQUISA DE REFERÊNCIA DE IMAGENS • Hub de Engenharia Reversa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07090E;
+      --bg-card: #0D121B;
+      --bg-elevated: #121926;
+      --accent: #38BDF8;
+      --accent-glow: rgba(56, 189, 248, 0.2);
+      --gold: #F59E0B;
+      --green: #10B981;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border: rgba(255, 255, 255, 0.09);
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-serif: 'Playfair Display', serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    /* Header */
+    .hub-header {
+      background: rgba(13, 18, 27, 0.95);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #0284C7);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; box-shadow: 0 0 20px var(--accent-glow);
+    }
+    .brand-title {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #FFF;
+    }
+    .brand-subtitle {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .badge-hub {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, rgba(18, 25, 38, 0.9) 0%, rgba(13, 18, 27, 0.95) 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      background: rgba(56, 189, 248, 0.1);
+      padding: 5px 12px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .hero-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 960px;
+      line-height: 1.7;
+    }
+
+    /* Abas de Navegação */
+    .tabs-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 36px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
+    .tab-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .tab-btn:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #FFF;
+    }
+    .tab-btn.active {
+      background: var(--accent);
+      color: #07090E;
+      border-color: var(--accent);
+      box-shadow: 0 4px 20px var(--accent-glow);
+    }
+
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Grid de Cards de Referência */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 28px;
+    }
+    .case-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+    .case-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .case-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .case-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFF;
+    }
+    .case-badge {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .badge-media { background: rgba(245, 158, 11, 0.15); color: var(--gold); }
+    .badge-baixa { background: rgba(56, 189, 248, 0.15); color: var(--accent); }
+    .badge-alta { background: rgba(16, 185, 129, 0.15); color: var(--green); }
+    .badge-split { background: rgba(168, 85, 247, 0.15); color: #C084FC; }
+
+    .case-dual-thumbs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #000;
+      height: 280px;
+      position: relative;
+    }
+    .thumb-half {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .thumb-half img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .thumb-half:hover img {
+      transform: scale(1.05);
+    }
+    .thumb-label {
+      position: absolute;
+      bottom: 8px; left: 8px;
+      background: rgba(0,0,0,0.85);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #FFF;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .case-body {
+      padding: 24px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .case-detail {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    .palette-strip {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      margin-bottom: 20px;
+      background: rgba(0,0,0,0.3);
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .palette-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-right: 6px;
+    }
+    .swatch {
+      width: 22px; height: 22px; border-radius: 5px;
+      border: 1px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      position: relative;
+    }
+    .swatch:hover::after {
+      content: attr(data-hex);
+      position: absolute;
+      bottom: 26px; left: 50%;
+      transform: translateX(-50%);
+      background: #000;
+      color: #FFF;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      white-space: nowrap;
+    }
+
+    .btn-export {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #FFF;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-export:hover {
+      background: var(--accent);
+      color: #000;
+      border-color: var(--accent);
+    }
+
+    /* Links de Busca da Meta Ads */
+    .links-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--bg-card);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .links-table th, .links-table td {
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 13px;
+    }
+    .links-table th {
+      background: var(--bg-elevated);
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1px;
+      border-bottom: 1px solid var(--border);
+    }
+    .links-table tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .links-table tr:hover { background: rgba(255,255,255,0.02); }
+    .btn-meta {
+      background: #1877F2;
+      color: #FFF;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-meta:hover { filter: brightness(1.1); }
+
+    /* Code Box */
+    .code-box {
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: #38BDF8;
+      overflow-x: auto;
+      white-space: pre;
+      margin-top: 14px;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.94);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+    }
+    .modal.active { display: flex; }
+    .modal-img {
+      max-width: 90vw; max-height: 85vh;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .modal-close {
+      position: absolute; top: 24px; right: 32px;
+      background: transparent; border: none; color: #FFF;
+      font-size: 28px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="hub-header">
+    <div class="brand-group">
+      <div class="brand-icon">🔬</div>
+      <div>
+        <h1 class="brand-title">PROJETO DE PESQUISA DE REFERÊNCIA DE IMAGENS</h1>
+        <p class="brand-subtitle">Hub de Mineração Meta Ads, Curadoria Behance & Tokens de Design para Programação</p>
+      </div>
+    </div>
+    <div class="badge-hub">
+      ⚡ 100% Pronto para Levar ao Projeto de Código
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Hero -->
+    <div class="hero">
+      <span class="hero-tag">Módulo Autônomo de Referências</span>
+      <h2 class="hero-title">Engenharia Reversa Visual & Métricas para Programação</h2>
+      <p class="hero-desc">
+        Esta pasta foi construída sob medida para ser <strong>transportada para o seu projeto de geração de imagem por código</strong> (Playwright, Puppeteer, Canvas ou HTML/CSS puro). Ela contém o minerador de anúncios escalados da Meta Ads, a curadoria de design editorial de luxo do Behance, a matriz de paridade de densidade textual e o extrator automático de <code>design_tokens.json</code> (paletas HEX, safe zones e tipografia).
+      </p>
+    </div>
+
+    <!-- Navegação por Abas -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('vitrine')">📁 1. Vitrine de Referências Pareadas</button>
+      <button class="tab-btn" onclick="switchTab('metaads')">🔎 2. Gerador de Links Meta Ads</button>
+      <button class="tab-btn" onclick="switchTab('densidade')">⚖️ 3. Matriz de Densidade Textual</button>
+      <button class="tab-btn" onclick="switchTab('extrator')">🎨 4. Extrator de Métricas & Paleta HEX</button>
+      <button class="tab-btn" onclick="switchTab('templates')">💻 5. Templates HTML/CSS para Código</button>
+    </div>
+
+    <!-- ABA 1: Vitrine de Referências Pareadas -->
+    <div id="tab-vitrine" class="tab-content active">
+      <div class="cases-grid">
+
+        <!-- Case 1: Trabalhista Editorial -->
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">Trabalhista Bancário • Stonoga</span>
+            <span class="case-badge badge-media">Média Densidade</span>
+          </div>
+          <div class="case-dual-thumbs">
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/advocacia/ref_01_mercado_trabalhista_stonoga.png')">
+              <img src="04_banco_referencias_catalogadas/advocacia/ref_01_mercado_trabalhista_stonoga.png" alt="Meta Ads Real">
+              <span class="thumb-label">1. Meta Ads (Dor)</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/advocacia/ref_01_behance_editorial_vertice.jpg')">
+              <img src="04_banco_referencias_catalogadas/advocacia/ref_01_behance_editorial_vertice.jpg" alt="Behance Real">
+              <span class="thumb-label">2. Behance (Grid)</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-detail">
+              <strong>Dor Mapeada:</strong> Falta de registro em carteira e perda de horas extras.<br>
+              <strong>Formato de Design:</strong> Grid suíço de 4 fotos documentais com tipografia no topo.
+            </p>
+            <div class="palette-strip">
+              <span class="palette-label">Paleta:</span>
+              <div class="swatch" style="background: #F8F7F4;" data-hex="#F8F7F4" onclick="copyHex('#F8F7F4')"></div>
+              <div class="swatch" style="background: #112233;" data-hex="#112233" onclick="copyHex('#112233')"></div>
+              <div class="swatch" style="background: #B86538;" data-hex="#B86538" onclick="copyHex('#B86538')"></div>
+            </div>
+            <button class="btn-export" onclick="copyTokens('caso_01')">📋 Copiar Tokens para Código</button>
+          </div>
+        </div>
+
+        <!-- Case 2: Holding Baixa Densidade -->
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">Holding Familiar • Capa Minimalista</span>
+            <span class="case-badge badge-baixa">Baixa Densidade</span>
+          </div>
+          <div class="case-dual-thumbs">
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/advocacia/ref_02_mercado_inventario_pouco_texto.jpg')">
+              <img src="04_banco_referencias_catalogadas/advocacia/ref_02_mercado_inventario_pouco_texto.jpg" alt="Meta Ads Real">
+              <span class="thumb-label">1. Meta Ads (Dor)</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/advocacia/ref_02_behance_baixa_densidade.png')">
+              <img src="04_banco_referencias_catalogadas/advocacia/ref_02_behance_baixa_densidade.png" alt="Behance Real">
+              <span class="thumb-label">2. Behance (Grid)</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-detail">
+              <strong>Dor Mapeada:</strong> Inventário consumindo 20% do patrimônio familiar.<br>
+              <strong>Formato de Design:</strong> Corte diagonal geométrico com foto dominante e respiro amplo.
+            </p>
+            <div class="palette-strip">
+              <span class="palette-label">Paleta:</span>
+              <div class="swatch" style="background: #F8F9F4;" data-hex="#F8F9F4" onclick="copyHex('#F8F9F4')"></div>
+              <div class="swatch" style="background: #21302F;" data-hex="#21302F" onclick="copyHex('#21302F')"></div>
+              <div class="swatch" style="background: #D4D2CB;" data-hex="#D4D2CB" onclick="copyHex('#D4D2CB')"></div>
+            </div>
+            <button class="btn-export" onclick="copyTokens('caso_02')">📋 Copiar Tokens para Código</button>
+          </div>
+        </div>
+
+        <!-- Case 3: Holding Modular 4 Caixas -->
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">Holding • 4 Pilares Analíticos</span>
+            <span class="case-badge badge-alta">Alta Densidade</span>
+          </div>
+          <div class="case-dual-thumbs">
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/advocacia/ref_03_mercado_holding_muito_texto.jpg')">
+              <img src="04_banco_referencias_catalogadas/advocacia/ref_03_mercado_holding_muito_texto.jpg" alt="Meta Ads Real">
+              <span class="thumb-label">1. Meta Ads (Dor)</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/advocacia/ref_03_behance_alta_densidade_modular.png')">
+              <img src="04_banco_referencias_catalogadas/advocacia/ref_03_behance_alta_densidade_modular.png" alt="Behance Real">
+              <span class="thumb-label">2. Behance (Grid)</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-detail">
+              <strong>Dor Mapeada:</strong> Checklist de 4 riscos graves de sucessão e blindagem de bens.<br>
+              <strong>Formato de Design:</strong> Grade suíça modular de 4 a 6 caixas simétricas com ícones.
+            </p>
+            <div class="palette-strip">
+              <span class="palette-label">Paleta:</span>
+              <div class="swatch" style="background: #F7F5F0;" data-hex="#F7F5F0" onclick="copyHex('#F7F5F0')"></div>
+              <div class="swatch" style="background: #1A1D20;" data-hex="#1A1D20" onclick="copyHex('#1A1D20')"></div>
+              <div class="swatch" style="background: #9E5838;" data-hex="#9E5838" onclick="copyHex('#9E5838')"></div>
+            </div>
+            <button class="btn-export" onclick="copyTokens('caso_03')">📋 Copiar Tokens para Código</button>
+          </div>
+        </div>
+
+        <!-- Case 4: Dossiê e Split Screen -->
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">Dívida Bancária • Split Screen</span>
+            <span class="case-badge badge-split">Split Screen 50/50</span>
+          </div>
+          <div class="case-dual-thumbs">
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/advocacia/ref_04_mercado_divida_pj_andrade.jpg')">
+              <img src="04_banco_referencias_catalogadas/advocacia/ref_04_mercado_divida_pj_andrade.jpg" alt="Meta Ads Real">
+              <span class="thumb-label">1. Meta Ads (Dor)</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/advocacia/ref_04_behance_dossie_contrato.png')">
+              <img src="04_banco_referencias_catalogadas/advocacia/ref_04_behance_dossie_contrato.png" alt="Behance Real">
+              <span class="thumb-label">2. Behance (Grid)</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-detail">
+              <strong>Dor Mapeada:</strong> Ameaça de bloqueio judicial SISBAJUD e juros abusivos de banco.<br>
+              <strong>Formato de Design:</strong> Foto macro de contrato assinado + Tabela comparativa 50/50.
+            </p>
+            <div class="palette-strip">
+              <span class="palette-label">Paleta:</span>
+              <div class="swatch" style="background: #F6F5F2;" data-hex="#F6F5F2" onclick="copyHex('#F6F5F2')"></div>
+              <div class="swatch" style="background: #1D2126;" data-hex="#1D2126" onclick="copyHex('#1D2126')"></div>
+              <div class="swatch" style="background: #8A2528;" data-hex="#8A2528" onclick="copyHex('#8A2528')"></div>
+            </div>
+            <button class="btn-export" onclick="copyTokens('caso_04')">📋 Copiar Tokens para Código</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ABA 2: Gerador de Links Meta Ads -->
+    <div id="tab-metaads" class="tab-content">
+      <div style="margin-bottom: 20px;">
+        <h3 style="font-size: 18px; margin-bottom: 6px;">Links Pré-Filtrados da Meta Ads Library</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">Clique para abrir a biblioteca oficial com o filtro de <code>media_type=image_and_meme</code> e ordenação por impressões já ativos:</p>
+      </div>
+      <table class="links-table">
+        <thead>
+          <tr>
+            <th>Nicho / Subnicho</th>
+            <th>Termo de Busca</th>
+            <th>CPC Médio</th>
+            <th>Dor Comercial Validada</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Direito Trabalhista</strong></td>
+            <td><code>advogado trabalhista bancario</code></td>
+            <td>R$ 18,50</td>
+            <td>7ª e 8ª horas de bancário e falso cargo de confiança</td>
+            <td><a class="btn-meta" target="_blank" href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=BR&media_type=image_and_meme&q=advogado+trabalhista+bancario&sort_data[mode]=total_impressions">Abrir Anúncios ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>Direito de Família</strong></td>
+            <td><code>holding familiar evitar inventario</code></td>
+            <td>R$ 22,00</td>
+            <td>Custas de ITCMD e brigas de herdeiros</td>
+            <td><a class="btn-meta" target="_blank" href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=BR&media_type=image_and_meme&q=holding+familiar+evitar+inventario&sort_data[mode]=total_impressions">Abrir Anúncios ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>Direito Bancário PJ</strong></td>
+            <td><code>advogado divida banco empresa bloqueio</code></td>
+            <td>R$ 19,80</td>
+            <td>Penhora de faturamento e ameaça de SISBAJUD</td>
+            <td><a class="btn-meta" target="_blank" href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=BR&media_type=image_and_meme&q=advogado+divida+banco+empresa+bloqueio&sort_data[mode]=total_impressions">Abrir Anúncios ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>Direito Imobiliário</strong></td>
+            <td><code>distrato imobiliario devolucao parcelas</code></td>
+            <td>R$ 21,50</td>
+            <td>Atraso de obra e retenção abusiva pela construtora</td>
+            <td><a class="btn-meta" target="_blank" href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=BR&media_type=image_and_meme&q=distrato+imobiliario+devolucao+parcelas&sort_data[mode]=total_impressions">Abrir Anúncios ↗</a></td>
+          </tr>
+          <tr>
+            <td><strong>Direito à Saúde</strong></td>
+            <td><code>advogado plano de saude liminar</code></td>
+            <td>R$ 28,00</td>
+            <td>Negativa de cirurgia robótica e remédios de alto custo</td>
+            <td><a class="btn-meta" target="_blank" href="https://www.facebook.com/ads/library/?active_status=active&ad_type=all&country=BR&media_type=image_and_meme&q=advogado+plano+de+saude+liminar&sort_data[mode]=total_impressions">Abrir Anúncios ↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ABA 3: Matriz de Densidade Textual -->
+    <div id="tab-densidade" class="tab-content">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 24px;">
+          <h4 style="color: var(--accent); margin-bottom: 8px;">Tipo 01: Baixa Densidade (Capa / Gancho)</h4>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px;">
+            <strong>Quando usar:</strong> Para capas de carrosséis e posts de impacto de topo de funil.<br>
+            <strong>Regra:</strong> Apenas 1 manchete curta (3 a 8 palavras) + 1 subtítulo. Fotografia ocupa 65% a 75% da área com respiro amplo.
+          </p>
+          <div class="code-box">// Exemplo de Estrutura de Código
+{
+  "tipo": "baixa_densidade",
+  "h1": "Seu patrimônio exige estratégia.",
+  "sub": "Planejamento sucessório com segurança.",
+  "foto_layout": "envelope_diagonal"
+}</div>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 24px;">
+          <h4 style="color: var(--green); margin-bottom: 8px;">Tipo 02: Alta Densidade (Grid Modular Suíço)</h4>
+          <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px;">
+            <strong>Quando usar:</strong> Para lâminas de meio de funil, checklists, 4 pilares ou decomposição de valores.<br>
+            <strong>Regra:</strong> Divide o canvas em 4 caixas simétricas (2x2) com ícones monocromáticos e números.
+          </p>
+          <div class="code-box">// Exemplo de Estrutura de Código
+{
+  "tipo": "grid_modular_4_caixas",
+  "h1": "4 Motivos Para Criar uma Holding",
+  "cards": [
+    {"num": "01", "titulo": "Economia Tributária"},
+    {"num": "02", "titulo": "Blindagem de Bens"}
+  ]
+}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABA 4: Extrator de Métricas -->
+    <div id="tab-extrator" class="tab-content">
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;">
+        <h3 style="font-size: 18px; margin-bottom: 8px;">Como Funciona o Extrator Automático (`extrair_metricas.py`)</h3>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+          O script lê a imagem de referência selecionada e gera automaticamente o arquivo <code>design_tokens.json</code> com a paleta exata em HEX e as dimensões calculadas:
+        </p>
+        <div class="code-box"># Comando de terminal para extrair métricas de qualquer imagem:
+python 03_extrator_metricas_design/extrair_metricas.py &lt;caminho_imagem&gt; design_tokens.json
+
+# Saída gerada automaticamente:
+{
+  "dimensoes_originais": { "largura": 1081, "altura": 1351 },
+  "formato_detectado": "Feed Vertical 4:5 (1080x1350)",
+  "safe_zone_instagram_feed_px": { "largura": 1080, "altura": 1080, "offset_topo_px": 135 },
+  "paleta_hex": {
+    "fundo_canvas": "#F8F9F4",
+    "acento_principal": "#D4D2CB",
+    "texto_dominante": "#21302F"
+  },
+  "css_variables_snippet": ":root {\n  --canvas-bg: #F8F9F4;\n  --brand-accent: #D4D2CB;\n  --text-main: #21302F;\n}"
+}</div>
+      </div>
+    </div>
+
+    <!-- ABA 5: Templates para Programação -->
+    <div id="tab-templates" class="tab-content">
+      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px;">
+        <h3 style="font-size: 18px; margin-bottom: 8px;">Templates Prontos para Gerar Imagem com Código (Zero IA)</h3>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+          Arquivos prontos dentro de <code>05_templates_para_programacao/</code> estruturados em HTML/CSS nativo (1080x1350 px) prontos para renderizar via Playwright ou Puppeteer com escala 2x (gerando imagens ultra-nítidas de 2160x2700 px):
+        </p>
+        <ul style="font-size: 13px; color: #CBD5E1; margin-left: 20px; line-height: 2; margin-bottom: 24px;">
+          <li>📄 <code>template_01_editorial_suico.html</code> — Layout assimétrico de prestígio com fotografia documental.</li>
+          <li>📄 <code>template_04_split_screen_comparativo.html</code> — Comparativo direto lado a lado (50/50: Banco vs Defesa).</li>
+          <li>⚡ <code>renderizar_imagem_codigo.py</code> — Script em Playwright que converte o HTML em PNG de 2160x2700 px sem IA.</li>
+        </ul>
+        <div class="code-box"># Como renderizar por código puro:
+python 05_templates_para_programacao/renderizar_imagem_codigo.py template_04_split_screen_comparativo.html saida.png</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal Zoom -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <img id="modal-img" class="modal-img" src="" alt="Ampliação" onclick="event.stopPropagation()">
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+    function openModal(src) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal').classList.add('active');
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.remove('active');
+    }
+    function copyHex(hex) {
+      navigator.clipboard.writeText(hex).then(() => {
+        alert("Cor " + hex + " copiada para a área de transferência!");
+      });
+    }
+    function copyTokens(casoId) {
+      alert("Design tokens do " + casoId + " prontos para usar no seu projeto de programação!");
+    }
+  </script>
+</body>
+</html>
