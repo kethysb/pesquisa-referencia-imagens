@@ -1,0 +1,118 @@
+{
+  "01_desfibradeira": {
+    "arquivo_referencia": "01_visao_geral_completa.jpg",
+    "dimensoes_originais": {
+      "largura": 3264,
+      "altura": 4080
+    },
+    "formato_detectado": "Feed Vertical 4:5 (1080x1350)",
+    "safe_zone_instagram_feed_px": {
+      "largura": 1080,
+      "altura": 1080,
+      "offset_topo_px": 408
+    },
+    "paleta_hex": {
+      "fundo_canvas": "#F0F0EE",
+      "acento_principal": "#E2E2E0",
+      "texto_dominante": "#1A2730",
+      "todas_cores_extraidas": [
+        "#F0F0EE",
+        "#E2E2E0",
+        "#C5B9AE",
+        "#7C7E7C",
+        "#63413A",
+        "#1A2730"
+      ]
+    },
+    "css_variables_snippet": ":root {\n  --canvas-bg: #F0F0EE;\n  --brand-accent: #E2E2E0;\n  --text-main: #1A2730;\n}",
+    "nome_maquina": "Desfibradeira de Fibra Siliconada",
+    "total_fotos_na_pasta": 9
+  },
+  "02_enchedora": {
+    "arquivo_referencia": "02_enchedora_visao_frontal.jpg",
+    "dimensoes_originais": {
+      "largura": 1280,
+      "altura": 720
+    },
+    "formato_detectado": "Customizado (1280x720 px, proporção 1.778)",
+    "safe_zone_instagram_feed_px": {
+      "largura": 1080,
+      "altura": 1080,
+      "offset_topo_px": 0
+    },
+    "paleta_hex": {
+      "fundo_canvas": "#A9A59E",
+      "acento_principal": "#7F7977",
+      "texto_dominante": "#020405",
+      "todas_cores_extraidas": [
+        "#A9A59E",
+        "#7F7977",
+        "#615E5B",
+        "#3C4F53",
+        "#30292B",
+        "#020405"
+      ]
+    },
+    "css_variables_snippet": ":root {\n  --canvas-bg: #A9A59E;\n  --brand-accent: #7F7977;\n  --text-main: #020405;\n}",
+    "nome_maquina": "Enchedora Automática de Travesseiros",
+    "total_fotos_na_pasta": 4
+  },
+  "03_tesourinha": {
+    "arquivo_referencia": "01_tesourinha_estopa_visao_geral.jpg",
+    "dimensoes_originais": {
+      "largura": 360,
+      "altura": 640
+    },
+    "formato_detectado": "Stories / Reels 9:16 (1080x1920)",
+    "safe_zone_instagram_feed_px": {
+      "largura": 360,
+      "altura": 360,
+      "offset_topo_px": 140
+    },
+    "paleta_hex": {
+      "fundo_canvas": "#E5E3CC",
+      "acento_principal": "#C9B8A2",
+      "texto_dominante": "#2D3E52",
+      "todas_cores_extraidas": [
+        "#E5E3CC",
+        "#C9B8A2",
+        "#AC9683",
+        "#6A666F",
+        "#455067",
+        "#2D3E52"
+      ]
+    },
+    "css_variables_snippet": ":root {\n  --canvas-bg: #E5E3CC;\n  --brand-accent: #C9B8A2;\n  --text-main: #2D3E52;\n}",
+    "nome_maquina": "Tesourinha Cortadeira Contínua de Estopa",
+    "total_fotos_na_pasta": 4
+  },
+  "04_especiais": {
+    "arquivo_referencia": "01_projeto_maquina_sob_medida_1.jpg",
+    "dimensoes_originais": {
+      "largura": 1280,
+      "altura": 720
+    },
+    "formato_detectado": "Customizado (1280x720 px, proporção 1.778)",
+    "safe_zone_instagram_feed_px": {
+      "largura": 1080,
+      "altura": 1080,
+      "offset_topo_px": 0
+    },
+    "paleta_hex": {
+      "fundo_canvas": "#D7E5C5",
+      "acento_principal": "#A39F90",
+      "texto_dominante": "#090D0E",
+      "todas_cores_extraidas": [
+        "#D7E5C5",
+        "#A39F90",
+        "#DE572A",
+        "#595F65",
+        "#563B34",
+        "#090D0E"
+      ]
+    },
+    "css_variables_snippet": ":root {\n  --canvas-bg: #D7E5C5;\n  --brand-accent: #A39F90;\n  --text-main: #090D0E;\n}",
+    "nome_maquina": "Projetos Especiais Sob Medida",
+    "total_fotos_na_pasta": 2
+  }
+}

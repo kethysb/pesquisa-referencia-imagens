@@ -426,15 +426,213 @@
 
     <!-- Navegação por Abas -->
     <div class="tabs-nav">
-      <button class="tab-btn active" onclick="switchTab('vitrine')">📁 1. Vitrine de Referências Pareadas</button>
-      <button class="tab-btn" onclick="switchTab('metaads')">🔎 2. Gerador de Links Meta Ads</button>
-      <button class="tab-btn" onclick="switchTab('densidade')">⚖️ 3. Matriz de Densidade Textual</button>
-      <button class="tab-btn" onclick="switchTab('extrator')">🎨 4. Extrator de Métricas & Paleta HEX</button>
-      <button class="tab-btn" onclick="switchTab('templates')">💻 5. Templates HTML/CSS para Código</button>
+      <button class="tab-btn active" onclick="switchTab('maquinas')">🏭 1. Máquinas Industriais (Pai James / JV Usinagem)</button>
+      <button class="tab-btn" onclick="switchTab('vitrine')">📁 2. Vitrine Editorial (Advocacia & Imobiliário)</button>
+      <button class="tab-btn" onclick="switchTab('metaads')">🔎 3. Gerador de Links Meta Ads</button>
+      <button class="tab-btn" onclick="switchTab('densidade')">⚖️ 4. Matriz de Densidade Textual</button>
+      <button class="tab-btn" onclick="switchTab('extrator')">🎨 5. Extrator de Métricas & Paleta HEX</button>
+      <button class="tab-btn" onclick="switchTab('templates')">💻 6. Templates HTML/CSS para Código</button>
     </div>
 
+        <!-- ABA 1: Máquinas Industriais (Pai James / JV Usinagem) -->
+    <div id="tab-maquinas" class="tab-content active">
+      <div style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.12) 0%, rgba(13, 18, 27, 0.95) 100%); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 16px; padding: 28px; margin-bottom: 30px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 12px;">
+          <div>
+            <span style="font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #38BDF8; background: rgba(56, 189, 248, 0.15); padding: 4px 10px; border-radius: 6px;">Case Real de Engenharia Industrial</span>
+            <h3 style="font-size: 22px; font-weight: 800; margin-top: 6px; color: #FFF;">JV Usinagem • Máquinas Têxteis do Pai James</h3>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <span style="font-size: 12px; font-weight: 700; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10B981; padding: 6px 14px; border-radius: 20px;">19 Fotos Físicas Reais</span>
+            <span style="font-size: 12px; font-weight: 700; background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); color: #38BDF8; padding: 6px 14px; border-radius: 20px;">4 Novas Imagens Geradas</span>
+            <span style="font-size: 12px; font-weight: 700; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.3); color: #F59E0B; padding: 6px 14px; border-radius: 20px;">Template 4:5 Ultra-HD</span>
+          </div>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+          Mapeamento completo das 4 linhas de máquinas industriais desenvolvidas pela <strong>JV Usinagem (Pai James)</strong>. Utiliza as fotos físicas dos maquinários como referências de fidelidade geométrica (chassi de aço azul, inversores Delta, esteiras e motorredutores) integradas ao <strong>Image 2</strong> e a templates de programação com zero defeitos visuais.
+        </p>
+      </div>
+
+      <div class="cases-grid">
+
+        <!-- Máquina 1: Desfibradeira de Fibra -->
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">01. Desfibradeira de Fibra Siliconada</span>
+            <span class="case-badge" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8;">9 Fotos Reais + 1 IA</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: #000; height: 260px;">
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/01_Desfibradeira_de_Fibra/01_visao_geral_completa.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/01_Desfibradeira_de_Fibra/01_visao_geral_completa.jpg" alt="Máquina Real">
+              <span class="thumb-label">1. Máquina Pronta</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/01_Desfibradeira_de_Fibra/02_maquina_em_operacao_esteira.png')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/01_Desfibradeira_de_Fibra/02_maquina_em_operacao_esteira.png" alt="Operação Real">
+              <span class="thumb-label">2. Esteira em Operação</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/01_Desfibradeira_de_Fibra/10_desfibradeira_nova_gerada_ia.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/01_Desfibradeira_de_Fibra/10_desfibradeira_nova_gerada_ia.jpg" alt="Nova Imagem Comercial">
+              <span class="thumb-label" style="background: rgba(16, 185, 129, 0.9);">✨ Nova Gerada (IA)</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-detail">
+              <strong>Dor Resolvida:</strong> Fibra compactada em manta que embola, gera perda de rendimento e alto custo de mão de obra.<br>
+              <strong>Engenharia:</strong> Chassi em aço naval azul, esteira contínua com batedores e inversor Delta.
+            </p>
+            <div class="palette-strip">
+              <span class="palette-label">Paleta:</span>
+              <div class="swatch" style="background: #0284C7;" data-hex="#0284C7" onclick="copyHex('#0284C7')"></div>
+              <div class="swatch" style="background: #38BDF8;" data-hex="#38BDF8" onclick="copyHex('#38BDF8')"></div>
+              <div class="swatch" style="background: #0E1520;" data-hex="#0E1520" onclick="copyHex('#0E1520')"></div>
+              <div class="swatch" style="background: #E2E2E0;" data-hex="#E2E2E0" onclick="copyHex('#E2E2E0')"></div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-export" style="flex: 1;" onclick="copyPromptMaquina('1')">📋 Copiar Prompt Image 2</button>
+              <button class="btn-export" style="flex: 1; background: rgba(56, 189, 248, 0.15); border-color: #38BDF8; color: #38BDF8;" onclick="executarComandoCli('6')">⚡ Clonar Esteira</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Máquina 2: Enchedora de Travesseiros -->
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">02. Enchedora de Travesseiros</span>
+            <span class="case-badge" style="background: rgba(16, 185, 129, 0.15); color: #10B981;">4 Fotos Reais + 1 IA</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: #000; height: 260px;">
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/02_Enchedora_de_Travesseiros/02_enchedora_visao_frontal.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/02_Enchedora_de_Travesseiros/02_enchedora_visao_frontal.jpg" alt="Visão Frontal">
+              <span class="thumb-label">1. Frontal</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/02_Enchedora_de_Travesseiros/01_bocal_enchimento_travesseiro.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/02_Enchedora_de_Travesseiros/01_bocal_enchimento_travesseiro.jpg" alt="Bocal Pneumático">
+              <span class="thumb-label">2. Bocal Sopro</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/02_Enchedora_de_Travesseiros/05_enchedora_nova_gerada_ia.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/02_Enchedora_de_Travesseiros/05_enchedora_nova_gerada_ia.jpg" alt="Nova Imagem Comercial">
+              <span class="thumb-label" style="background: rgba(16, 185, 129, 0.9);">✨ Nova Gerada (IA)</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-detail">
+              <strong>Dor Resolvida:</strong> Enchimento manual lento, peso desuniforme por peça e gargalo de expedição industrial.<br>
+              <strong>Engenharia:</strong> Bocal de injeção pneumática instantânea acoplado com tubulação de ar de alta pressão.
+            </p>
+            <div class="palette-strip">
+              <span class="palette-label">Paleta:</span>
+              <div class="swatch" style="background: #121820;" data-hex="#121820" onclick="copyHex('#121820')"></div>
+              <div class="swatch" style="background: #38BDF8;" data-hex="#38BDF8" onclick="copyHex('#38BDF8')"></div>
+              <div class="swatch" style="background: #7F7977;" data-hex="#7F7977" onclick="copyHex('#7F7977')"></div>
+              <div class="swatch" style="background: #F8FAFC;" data-hex="#F8FAFC" onclick="copyHex('#F8FAFC')"></div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-export" style="flex: 1;" onclick="copyPromptMaquina('2')">📋 Copiar Prompt Image 2</button>
+              <button class="btn-export" style="flex: 1; background: rgba(56, 189, 248, 0.15); border-color: #38BDF8; color: #38BDF8;" onclick="executarComandoCli('7')">⚡ Clonar Esteira</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Máquina 3: Tesourinha Cortadeira de Estopa -->
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">03. Cortadeira Contínua de Estopa</span>
+            <span class="case-badge" style="background: rgba(245, 158, 11, 0.15); color: #F59E0B;">4 Fotos Reais + 1 IA</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: #000; height: 260px;">
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/03_Tesourinha_Cortadeira_de_Estopa/01_tesourinha_estopa_visao_geral.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/03_Tesourinha_Cortadeira_de_Estopa/01_tesourinha_estopa_visao_geral.jpg" alt="Visão Geral">
+              <span class="thumb-label">1. Geral</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/03_Tesourinha_Cortadeira_de_Estopa/02_tesourinha_estopa_mecanismo_corte.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/03_Tesourinha_Cortadeira_de_Estopa/02_tesourinha_estopa_mecanismo_corte.jpg" alt="Mecanismo de Corte">
+              <span class="thumb-label">2. Facas Rotativas</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/03_Tesourinha_Cortadeira_de_Estopa/05_tesourinha_nova_gerada_ia.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/03_Tesourinha_Cortadeira_de_Estopa/05_tesourinha_nova_gerada_ia.jpg" alt="Nova Imagem Comercial">
+              <span class="thumb-label" style="background: rgba(16, 185, 129, 0.9);">✨ Nova Gerada (IA)</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-detail">
+              <strong>Dor Resolvida:</strong> Desperdício de sobras têxteis, corte manual travado e quebra frequente de facas.<br>
+              <strong>Engenharia:</strong> Cabeçote rotativo com lâminas de aço carbono temperado e alimentação contínua por rolos.
+            </p>
+            <div class="palette-strip">
+              <span class="palette-label">Paleta:</span>
+              <div class="swatch" style="background: #0D1117;" data-hex="#0D1117" onclick="copyHex('#0D1117')"></div>
+              <div class="swatch" style="background: #F59E0B;" data-hex="#F59E0B" onclick="copyHex('#F59E0B')"></div>
+              <div class="swatch" style="background: #AC9683;" data-hex="#AC9683" onclick="copyHex('#AC9683')"></div>
+              <div class="swatch" style="background: #F1F5F9;" data-hex="#F1F5F9" onclick="copyHex('#F1F5F9')"></div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-export" style="flex: 1;" onclick="copyPromptMaquina('3')">📋 Copiar Prompt Image 2</button>
+              <button class="btn-export" style="flex: 1; background: rgba(56, 189, 248, 0.15); border-color: #38BDF8; color: #38BDF8;" onclick="executarComandoCli('8')">⚡ Clonar Esteira</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Máquina 4: Projetos Especiais Sob Medida -->
+        <div class="case-card">
+          <div class="case-header">
+            <span class="case-title">04. Projetos Especiais Sob Encomenda</span>
+            <span class="case-badge" style="background: rgba(222, 87, 42, 0.15); color: #DE572A;">2 Fotos Reais + 1 IA</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: #000; height: 260px;">
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/04_Projetos_Especiais_Sob_Encomenda/01_projeto_maquina_sob_medida_1.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/04_Projetos_Especiais_Sob_Encomenda/01_projeto_maquina_sob_medida_1.jpg" alt="Máquina Sob Medida">
+              <span class="thumb-label">1. Projeto Real</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/04_Projetos_Especiais_Sob_Encomenda/02_projeto_maquina_sob_medida_2.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/04_Projetos_Especiais_Sob_Encomenda/02_projeto_maquina_sob_medida_2.jpg" alt="Montagem na Oficina">
+              <span class="thumb-label">2. Linha de Montagem</span>
+            </div>
+            <div class="thumb-half" onclick="openModal('04_banco_referencias_catalogadas/maquinas_industriais/04_Projetos_Especiais_Sob_Encomenda/03_projeto_especial_novo_gerado_ia.jpg')">
+              <img src="04_banco_referencias_catalogadas/maquinas_industriais/04_Projetos_Especiais_Sob_Encomenda/03_projeto_especial_novo_gerado_ia.jpg" alt="Nova Imagem Comercial">
+              <span class="thumb-label" style="background: rgba(16, 185, 129, 0.9);">✨ Nova Gerada (IA)</span>
+            </div>
+          </div>
+          <div class="case-body">
+            <p class="case-detail">
+              <strong>Dor Resolvida:</strong> Plantas fabris com necessidades específicas que o maquinário padrão do mercado não atende.<br>
+              <strong>Engenharia:</strong> Fabricação sob medida pelo Pai James: estrutura pesada, motorização calculada e projeto 3D dedicado.
+            </p>
+            <div class="palette-strip">
+              <span class="palette-label">Paleta:</span>
+              <div class="swatch" style="background: #090D14;" data-hex="#090D14" onclick="copyHex('#090D14')"></div>
+              <div class="swatch" style="background: #DE572A;" data-hex="#DE572A" onclick="copyHex('#DE572A')"></div>
+              <div class="swatch" style="background: #A39F90;" data-hex="#A39F90" onclick="copyHex('#A39F90')"></div>
+              <div class="swatch" style="background: #F8FAFC;" data-hex="#F8FAFC" onclick="copyHex('#F8FAFC')"></div>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn-export" style="flex: 1;" onclick="copyPromptMaquina('4')">📋 Copiar Prompt Image 2</button>
+              <button class="btn-export" style="flex: 1; background: rgba(56, 189, 248, 0.15); border-color: #38BDF8; color: #38BDF8;" onclick="executarComandoCli('9')">⚡ Clonar Esteira</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Caixa de Comandos Rápidos -->
+      <div style="margin-top: 32px; background: #0D121B; border: 1px solid var(--border); border-radius: 14px; padding: 24px;">
+        <h4 style="font-size: 15px; color: #FFF; margin-bottom: 8px;">🚀 Como Criar Novas Imagens Dessas Máquinas no seu Terminal</h4>
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px;">
+          Basta rodar os scripts já configurados nesta pasta para disparar gerações no Image 2 ou clonar esteiras isoladas:
+        </p>
+        <div class="code-box"># 1. Gerar novas fotos comerciais no Image 2 oficial:
+python gerar_novas_imagens_maquinas_image2.py 1  # 1=Desfibradeira, 2=Enchedora, 3=Tesourinha, 4=Projetos Especiais
+
+# 2. Clonar esteira isolada para um novo cliente ou catálogo:
+python clonar_para_image2.py "JV Usinagem" 6
+
+# 3. Renderizar arte gráfica 4:5 Ultra-HD (2160x2700 px) por código puro sem IA:
+python 05_templates_para_programacao/renderizar_imagem_codigo.py 05_templates_para_programacao/template_05_catalogo_maquinas_industriais.html catalogo_desfibradeira.png</div>
+      </div>
+    </div>
+
+
     <!-- ABA 1: Vitrine de Referências Pareadas -->
-    <div id="tab-vitrine" class="tab-content active">
+    <div id="tab-vitrine" class="tab-content">
       <div class="cases-grid">
 
         <!-- Case 1: Trabalhista Editorial -->
@@ -729,6 +927,27 @@ python 05_templates_para_programacao/renderizar_imagem_codigo.py template_04_spl
     function copyTokens(casoId) {
       alert("Design tokens do " + casoId + " prontos para usar no seu projeto de programação!");
     }
+      const PROMPTS_MAQUINAS = {
+      '1': "Ultra-photorealistic commercial industrial photography of this exact heavy-duty Fiber Opener and De-shredding Machine (Desfibradeira de Fibra Siliconada) from 'JV Usinagem' with industrial blue chassis, Delta inverter and fluffy siliconized fiber in a modern textile factory.",
+      '2': "Ultra-realistic industrial photography of this automatic Pneumatic Pillow and Cushion Filling Machine (Enchedora de Travesseiros) from 'JV Usinagem' filling a cotton pillowcase in 3 seconds in a clean bedding factory.",
+      '3': "Crisp, high-definition industrial photograph of the Continuous Textile Waste and Tow Cutter Machine (Tesourinha Cortadeira de Estopa) from 'JV Usinagem' slicing fabric remnants with rotary carbon steel blades.",
+      '4': "Authentic industrial documentary photograph inside the custom machine manufacturing workshop of 'JV Usinagem' with skilled machinists assembling custom textile machinery."
+    };
+
+    function copyPromptMaquina(id) {
+      const p = PROMPTS_MAQUINAS[id];
+      navigator.clipboard.writeText(p).then(() => {
+        alert("Prompt mestre do Image 2 copiado para a área de transferência!");
+      });
+    }
+
+    function executarComandoCli(casoId) {
+      const cmd = 'python clonar_para_image2.py "JV Usinagem" ' + casoId;
+      navigator.clipboard.writeText(cmd).then(() => {
+        alert("Comando copiado! Cole no seu terminal:\n" + cmd);
+      });
+    }
+
   </script>
 </body>
 </html>
