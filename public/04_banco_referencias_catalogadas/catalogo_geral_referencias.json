@@ -1,0 +1,185 @@
+{
+  "total_casos_catalogados": 8,
+  "casos": [
+    {
+      "id": "caso_01_trabalhista_editorial",
+      "nicho": "Advocacia",
+      "subnicho": "Trabalhista Bancário & PJ",
+      "densidade_textual": "Media",
+      "formato": "Feed 4:5 (1080x1350)",
+      "referencia_mercado": {
+        "anunciante": "Stonoga Advogados",
+        "dor": "Trabalhou sem carteira assinada ou horas extras de bancário não pagas",
+        "arquivo": "04_banco_referencias_catalogadas/advocacia/ref_01_mercado_trabalhista_stonoga.png"
+      },
+      "referencia_design": {
+        "autor": "Atílio Tonet (Behance)",
+        "conceito": "Editorial Suíço com 4 fotos documentais e tipografia serifada",
+        "arquivo": "04_banco_referencias_catalogadas/advocacia/ref_01_behance_editorial_vertice.jpg"
+      },
+      "tokens_extraidos": {
+        "fundo": "#F8F7F4",
+        "texto": "#112233",
+        "acento": "#B86538"
+      }
+    },
+    {
+      "id": "caso_02_holding_minimalista",
+      "nicho": "Advocacia",
+      "subnicho": "Holding Familiar & Sucessão",
+      "densidade_textual": "Baixa (Capa / Gancho)",
+      "formato": "Feed 4:5 (1080x1350)",
+      "referencia_mercado": {
+        "anunciante": "Especialista em Inventários",
+        "dor": "Inventário de posse não é de propriedade",
+        "arquivo": "04_banco_referencias_catalogadas/advocacia/ref_02_mercado_inventario_pouco_texto.jpg"
+      },
+      "referencia_design": {
+        "autor": "Atílio Tonet (Behance)",
+        "conceito": "Corte diagonal geométrico com foto dominante e respiro amplo",
+        "arquivo": "04_banco_referencias_catalogadas/advocacia/ref_02_behance_baixa_densidade.png"
+      },
+      "tokens_extraidos": {
+        "fundo": "#F8F9F4",
+        "texto": "#21302F",
+        "acento": "#D4D2CB"
+      }
+    },
+    {
+      "id": "caso_03_holding_modular_4_caixas",
+      "nicho": "Advocacia",
+      "subnicho": "Holding Familiar (4 Pilares)",
+      "densidade_textual": "Alta (Grid Modular)",
+      "formato": "Feed 4:5 (1080x1350)",
+      "referencia_mercado": {
+        "anunciante": "Dra. Jhéssica Cancilieri",
+        "dor": "4 riscos patrimoniais da família exposta a execuções",
+        "arquivo": "04_banco_referencias_catalogadas/advocacia/ref_03_mercado_holding_muito_texto.jpg"
+      },
+      "referencia_design": {
+        "autor": "Atílio Tonet (Behance)",
+        "conceito": "Grade suíça com 4 a 6 caixas simétricas e ícones limpos",
+        "arquivo": "04_banco_referencias_catalogadas/advocacia/ref_03_behance_alta_densidade_modular.png"
+      },
+      "tokens_extraidos": {
+        "fundo": "#F7F5F0",
+        "texto": "#1A1D20",
+        "acento": "#9E5838"
+      }
+    },
+    {
+      "id": "caso_04_divida_pj_dossie_comparativo",
+      "nicho": "Advocacia",
+      "subnicho": "Defesa Bancária Empresarial",
+      "densidade_textual": "Split Screen (50/50)",
+      "formato": "Feed 4:5 (1080x1350)",
+      "referencia_mercado": {
+        "anunciante": "Andrade Advocacia",
+        "dor": "Parcela atrasada e ameaça de bloqueio judicial SISBAJUD",
+        "arquivo": "04_banco_referencias_catalogadas/advocacia/ref_04_mercado_divida_pj_andrade.jpg"
+      },
+      "referencia_design": {
+        "autor": "Atílio Tonet (Behance)",
+        "conceito": "Foto macro de contrato assinado com card flutuante editorial",
+        "arquivo": "04_banco_referencias_catalogadas/advocacia/ref_04_behance_dossie_contrato.png"
+      },
+      "tokens_extraidos": {
+        "fundo": "#F6F5F2",
+        "texto": "#1D2126",
+        "acento": "#8A2528"
+      }
+    },
+    {
+      "id": "caso_05_desfibradeira_fibra",
+      "nicho": "Maquinas_Industriais",
+      "subnicho": "Indústria Têxtil & Estofados",
+      "densidade_textual": "Editorial Técnico / Catálogo B2B",
+      "formato": "Feed 4:5 (1080x1350)",
+      "referencia_mercado": {
+        "anunciante": "JV Usinagem (Pai James)",
+        "dor": "Fibra compactada que embola, perda de rendimento e alto custo de mão de obra para desfiar mantas",
+        "arquivo": "04_banco_referencias_catalogadas/maquinas_industriais/01_Desfibradeira_de_Fibra/01_visao_geral_completa.jpg"
+      },
+      "referencia_design": {
+        "autor": "JV Usinagem Industrial Showcase",
+        "conceito": "Fotografia técnica de maquinário industrial de aço azul, esteira de alimentação contínua e inversor Delta com textura de fibra siliconada aberta",
+        "arquivo": "04_banco_referencias_catalogadas/maquinas_industriais/01_Desfibradeira_de_Fibra/09_capa_desfibradeira.jpg"
+      },
+      "tokens_extraidos": {
+        "fundo": "#0E1520",
+        "texto": "#F8FAFC",
+        "acento": "#0284C7",
+        "detalhe": "#E2E2E0"
+      }
+    },
+    {
+      "id": "caso_06_enchedora_travesseiros",
+      "nicho": "Maquinas_Industriais",
+      "subnicho": "Fabricação de Travesseiros e Almofadas",
+      "densidade_textual": "Alta Velocidade / Produção Contínua",
+      "formato": "Feed 4:5 (1080x1350)",
+      "referencia_mercado": {
+        "anunciante": "JV Usinagem (Pai James)",
+        "dor": "Enchimento manual lento, peso desuniforme por unidade e gargalo de expedição",
+        "arquivo": "04_banco_referencias_catalogadas/maquinas_industriais/02_Enchedora_de_Travesseiros/02_enchedora_visao_frontal.jpg"
+      },
+      "referencia_design": {
+        "autor": "JV Usinagem Industrial Showcase",
+        "conceito": "Bocal de sopro pneumático de alta precisão acoplado à saída de fibra com processo de enchimento instantâneo",
+        "arquivo": "04_banco_referencias_catalogadas/maquinas_industriais/02_Enchedora_de_Travesseiros/01_bocal_enchimento_travesseiro.jpg"
+      },
+      "tokens_extraidos": {
+        "fundo": "#121820",
+        "texto": "#F8FAFC",
+        "acento": "#38BDF8",
+        "detalhe": "#7F7977"
+      }
+    },
+    {
+      "id": "caso_07_tesourinha_cortadeira_estopa",
+      "nicho": "Maquinas_Industriais",
+      "subnicho": "Reciclagem Têxtil & Corte Contínuo",
+      "densidade_textual": "Mecânica Pesada / Eficiência Operacional",
+      "formato": "Stories / Reels 9:16 (1080x1920) e Feed 4:5",
+      "referencia_mercado": {
+        "anunciante": "JV Usinagem (Pai James)",
+        "dor": "Desperdício de retalhos têxteis, corte manual travado e desgaste rápido de facas",
+        "arquivo": "04_banco_referencias_catalogadas/maquinas_industriais/03_Tesourinha_Cortadeira_de_Estopa/01_tesourinha_estopa_visao_geral.jpg"
+      },
+      "referencia_design": {
+        "autor": "JV Usinagem Industrial Showcase",
+        "conceito": "Cabeçote de corte rotativo contínuo, esteira de arraste com lâminas de aço carbono temperado em rotação ativa",
+        "arquivo": "04_banco_referencias_catalogadas/maquinas_industriais/03_Tesourinha_Cortadeira_de_Estopa/02_tesourinha_estopa_mecanismo_corte.jpg"
+      },
+      "tokens_extraidos": {
+        "fundo": "#0D1117",
+        "texto": "#F1F5F9",
+        "acento": "#F59E0B",
+        "detalhe": "#AC9683"
+      }
+    },
+    {
+      "id": "caso_08_projetos_especiais_sob_medida",
+      "nicho": "Maquinas_Industriais",
+      "subnicho": "Engenharia Mecânica & Usinagem Especial",
+      "densidade_textual": "Dossiê Industrial / Soluções Sob Encomenda",
+      "formato": "Feed 4:5 (1080x1350)",
+      "referencia_mercado": {
+        "anunciante": "JV Usinagem (Pai James)",
+        "dor": "Linhas de produção convencionais que não atendem às especificações técnicas da indústria",
+        "arquivo": "04_banco_referencias_catalogadas/maquinas_industriais/04_Projetos_Especiais_Sob_Encomenda/01_projeto_maquina_sob_medida_1.jpg"
+      },
+      "referencia_design": {
+        "autor": "JV Usinagem Industrial Showcase",
+        "conceito": "Linha de montagem industrial com chassi estrutural reforçado, motores dimensionados e automação customizada",
+        "arquivo": "04_banco_referencias_catalogadas/maquinas_industriais/04_Projetos_Especiais_Sob_Encomenda/02_projeto_maquina_sob_medida_2.jpg"
+      },
+      "tokens_extraidos": {
+        "fundo": "#090D14",
+        "texto": "#F8FAFC",
+        "acento": "#DE572A",
+        "detalhe": "#A39F90"
+      }
+    }
+  ]
+}
